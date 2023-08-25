@@ -5,12 +5,17 @@
   margin: 0;
   padding: 0;
 }
+
+:root {
+  --primary: #fabd4e;
+  --secondary: #1e1e1e;
+}
 html {
   font-size: 18px;
 }
 body {
   font-family: "Niramit", sans-serif;
-  color: #1e1e1e;
+  color: var(--secondary);
   font-size: 1rem;
 }
 .banner {
@@ -19,71 +24,73 @@ body {
   height: 100vh;
   justify-content: space-between;
 }
-.banner .banner-content {
+.banner-content {
   padding-left: 50px;
   width: calc(50% - 10px);
 }
-.banner .banner-content .banner-title {
-  color: #fabd4e;
-  font-size: 2.78rem;
+.banner-content .banner-title {
   margin-bottom: 45px;
+  color: var(--primary);
+  font-size: 2.78rem;
 }
-.banner .banner-content .banner-title span {
-  color: #1e1e1e;
-}
-.banner .banner-content .banner-subtitle {
+.banner-content .banner-subtitle {
   font-weight: normal;
   line-height: 17px;
 }
-.banner .banner-content .banner-text {
+.banner-content .banner-title span {
+  color: var(--secondary);
+}
+.banner-content .banner-text {
+  margin-bottom: 30px;
   font-weight: 100;
   line-height: 26px;
-  margin-bottom: 30px;
 }
-.banner .banner-image-wrapper {
+.banner-image-wrapper {
   width: calc(50% - 10px);
 }
-.banner .banner-image-wrapper .banner-image {
+.banner-image-wrapper .banner-image {
   width: 100%;
 }
+
 @media only screen and (max-width: 1024px) {
   html {
     font-size: 16px;
   }
-  .banner .banner-content {
+  .banner-content {
     padding-left: 20px;
     width: calc(55% - 10px);
   }
-  .banner .banner-image-wrapper {
+  .banner-image-wrapper {
     width: calc(45% - 10px);
   }
 }
+
 @media only screen and (max-width: 767px) {
   .banner {
     flex-direction: column-reverse;
     justify-content: space-around;
     height: auto;
   }
-  .banner .banner-content {
-    padding-left: 0;
+  .banner-content {
     width: calc(100% - 20px);
+    padding-left: 0;
   }
-  .banner .banner-content .banner-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  .banner .banner-content .banner-text {
-    margin-bottom: 15px;
-  }
-  .banner .banner-content .banner-subtitle {
-    font-size: 1.25rem;
-  }
-  .banner .banner-image-wrapper {
+  .banner-image-wrapper {
     width: calc(100% - 0px);
     display: flex;
     justify-content: end;
   }
-  .banner .banner-image-wrapper .banner-image {
+  .banner-image-wrapper .banner-image {
     width: 90%;
+  }
+  .banner-content .banner-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .banner-content .banner-text {
+    margin-bottom: 15px;
+  }
+  .banner-content .banner-subtitle {
+    font-size: 1.25rem;
   }
 }
